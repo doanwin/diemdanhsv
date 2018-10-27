@@ -31,11 +31,12 @@
             this.cbo_nhomnguoidung = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_Nguoidung = new System.Windows.Forms.DataGridView();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_nguoidungnhomnguoidung = new System.Windows.Forms.DataGridView();
             this.btnThemvao = new System.Windows.Forms.Button();
             this.btnLayra = new System.Windows.Forms.Button();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnPhanquyen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Nguoidung)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_nguoidungnhomnguoidung)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +71,18 @@
             this.dgv_Nguoidung.TabIndex = 3;
             this.dgv_Nguoidung.SelectionChanged += new System.EventHandler(this.dgv_Nguoidung_SelectionChanged);
             // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "TenDangNhap";
+            this.Column4.HeaderText = "Tên đăng nhập";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "MatKhau";
+            this.Column5.HeaderText = "Mật khẩu";
+            this.Column5.Name = "Column5";
+            // 
             // dgv_nguoidungnhomnguoidung
             // 
             this.dgv_nguoidungnhomnguoidung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -101,23 +114,22 @@
             this.btnLayra.UseVisualStyleBackColor = true;
             this.btnLayra.Click += new System.EventHandler(this.btnLayra_Click);
             // 
-            // Column4
+            // btnPhanquyen
             // 
-            this.Column4.DataPropertyName = "TenDangNhap";
-            this.Column4.HeaderText = "Tên đăng nhập";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "MatKhau";
-            this.Column5.HeaderText = "Mật khẩu";
-            this.Column5.Name = "Column5";
+            this.btnPhanquyen.Location = new System.Drawing.Point(11, 20);
+            this.btnPhanquyen.Name = "btnPhanquyen";
+            this.btnPhanquyen.Size = new System.Drawing.Size(75, 23);
+            this.btnPhanquyen.TabIndex = 7;
+            this.btnPhanquyen.Text = "Phân quyền";
+            this.btnPhanquyen.UseVisualStyleBackColor = true;
+            this.btnPhanquyen.Click += new System.EventHandler(this.btnPhanquyen_Click);
             // 
             // frmThemnguoidung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(744, 357);
+            this.Controls.Add(this.btnPhanquyen);
             this.Controls.Add(this.btnLayra);
             this.Controls.Add(this.btnThemvao);
             this.Controls.Add(this.dgv_nguoidungnhomnguoidung);
@@ -144,5 +156,6 @@
         private System.Windows.Forms.Button btnLayra;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Button btnPhanquyen;
     }
 }

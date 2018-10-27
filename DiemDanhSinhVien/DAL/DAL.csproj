@@ -63,7 +63,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>qldiemdanhsv.xsd</DependentUpon>
     </Compile>
-    <Compile Include="QL_PhanQuyen.cs" />
+    <Compile Include="DAL_QL_PhanQuyen.cs" />
     <Compile Include="Themnguoidungvaonhom.cs" />
   </ItemGroup>
   <ItemGroup>

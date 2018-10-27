@@ -33,6 +33,9 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgv_chucnangquyen = new System.Windows.Forms.DataGridView();
             this.btnLuu = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CoQuyen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_nhomnguoi)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -46,6 +49,7 @@
             this.dgv_nhomnguoi.Name = "dgv_nhomnguoi";
             this.dgv_nhomnguoi.Size = new System.Drawing.Size(256, 264);
             this.dgv_nhomnguoi.TabIndex = 0;
+            this.dgv_nhomnguoi.SelectionChanged += new System.EventHandler(this.dgv_nhomnguoi_SelectionChanged);
             // 
             // groupBox1
             // 
@@ -70,6 +74,10 @@
             // dgv_chucnangquyen
             // 
             this.dgv_chucnangquyen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_chucnangquyen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.CoQuyen});
             this.dgv_chucnangquyen.Location = new System.Drawing.Point(6, 19);
             this.dgv_chucnangquyen.Name = "dgv_chucnangquyen";
             this.dgv_chucnangquyen.Size = new System.Drawing.Size(345, 324);
@@ -85,6 +93,27 @@
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MaManhHinh";
+            this.Column1.HeaderText = "Mã màn hình";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "TenManHinh";
+            this.Column2.HeaderText = "Tên màn hình";
+            this.Column2.Name = "Column2";
+            // 
+            // CoQuyen
+            // 
+            this.CoQuyen.DataPropertyName = "CoQuyen";
+            this.CoQuyen.FalseValue = "0";
+            this.CoQuyen.HeaderText = "Có quyền";
+            this.CoQuyen.Name = "CoQuyen";
+            this.CoQuyen.TrueValue = "1";
             // 
             // frmPhanquyen
             // 
@@ -111,5 +140,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgv_chucnangquyen;
         private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn CoQuyen;
     }
 }

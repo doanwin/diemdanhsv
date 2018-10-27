@@ -121,5 +121,13 @@ namespace DiemDanhSinhVien.Views
             }
             
         }
+
+        private void btnPhanquyen_Click(object sender, EventArgs e)
+        {
+            frmPhanquyen frmphanquyen = new frmPhanquyen();
+            this.Hide();
+            frmphanquyen.ShowDialog();
+            this.Show();
+        }
     }
 }

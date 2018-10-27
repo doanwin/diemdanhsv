@@ -90,6 +90,12 @@
     <Compile Include="Views\frmThemnguoidung.Designer.cs">
       <DependentUpon>frmThemnguoidung.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmThemquyenchonhom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmThemquyenchonhom.Designer.cs">
+      <DependentUpon>frmThemquyenchonhom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\XtraUserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmThemnguoidung.resx">
       <DependentUpon>frmThemnguoidung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmThemquyenchonhom.resx">
+      <DependentUpon>frmThemquyenchonhom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\XtraUserControl1.resx">
       <DependentUpon>XtraUserControl1.cs</DependentUpon>
