@@ -45,7 +45,7 @@
             this.btnRestore = new DevExpress.XtraBars.BarButtonItem();
             this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDSCahoc = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
@@ -83,10 +83,10 @@
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbSStatus = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.tabHienThi = new DevExpress.XtraTab.XtraTabControl();
+            this.MdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCL1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabHienThi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -108,7 +108,7 @@
             this.btnRestore,
             this.skinRibbonGalleryBarItem1,
             this.barButtonItem6,
-            this.barButtonItem7,
+            this.btnDSCahoc,
             this.barButtonItem8,
             this.barButtonItem9,
             this.barButtonItem10,
@@ -372,12 +372,15 @@
             this.barButtonItem6.ImageIndex = 21;
             this.barButtonItem6.Name = "barButtonItem6";
             // 
-            // barButtonItem7
+            // btnDSCahoc
             // 
-            this.barButtonItem7.Caption = "Danh sách khóa học";
-            this.barButtonItem7.Id = 14;
-            this.barButtonItem7.ImageIndex = 32;
-            this.barButtonItem7.Name = "barButtonItem7";
+            this.btnDSCahoc.Caption = "Danh sách ca học";
+            this.btnDSCahoc.Id = 14;
+            this.btnDSCahoc.ImageIndex = 32;
+            this.btnDSCahoc.LargeGlyph = global::DiemDanhSinhVien.Properties.Resources.Sharepoint_icon;
+            this.btnDSCahoc.LargeWidth = 70;
+            this.btnDSCahoc.Name = "btnDSCahoc";
+            this.btnDSCahoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDSCahoc_ItemClick);
             // 
             // barButtonItem8
             // 
@@ -403,6 +406,8 @@
             this.barButtonItem11.Caption = "Danh sách lớp học";
             this.barButtonItem11.Id = 18;
             this.barButtonItem11.ImageIndex = 98;
+            this.barButtonItem11.LargeGlyph = global::DiemDanhSinhVien.Properties.Resources.Folder_Sharepoint_Folder_icon;
+            this.barButtonItem11.LargeWidth = 70;
             this.barButtonItem11.Name = "barButtonItem11";
             // 
             // barButtonItem12
@@ -546,12 +551,12 @@
             this.ribbonPageGroup4,
             this.ribbonPageGroup11});
             this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "Danh sách";
+            this.ribbonPage2.Text = "Danh mục";
             // 
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.ImageIndex = 51;
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem7);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnDSCahoc);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem11);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem12);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
@@ -651,34 +656,26 @@
             this.rbSStatus.Ribbon = this.ribbonControl1;
             this.rbSStatus.Size = new System.Drawing.Size(928, 31);
             // 
-            // tabHienThi
+            // MdiManager
             // 
-            this.tabHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabHienThi.Images = this.imgCL1;
-            this.tabHienThi.Location = new System.Drawing.Point(0, 143);
-            this.tabHienThi.Name = "tabHienThi";
-            this.tabHienThi.Size = new System.Drawing.Size(928, 308);
-            this.tabHienThi.TabIndex = 1;
-            this.tabHienThi.Click += new System.EventHandler(this.tabHienThi_Click);
+            this.MdiManager.MdiParent = this;
             // 
             // frmMain
             // 
-            this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(928, 482);
-            this.Controls.Add(this.tabHienThi);
             this.Controls.Add(this.rbSStatus);
             this.Controls.Add(this.ribbonControl1);
+            this.IsMdiContainer = true;
             this.Name = "frmMain";
             this.Ribbon = this.ribbonControl1;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.rbSStatus;
             this.Text = "ĐIỂM DANH SINH VIÊN";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCL1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabHienThi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -698,7 +695,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar rbSStatus;
-        private DevExpress.XtraTab.XtraTabControl tabHienThi;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
@@ -716,7 +712,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private DevExpress.Utils.ImageCollection imgCL1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private DevExpress.XtraBars.BarButtonItem btnDSCahoc;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
@@ -740,6 +736,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem24;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager MdiManager;
     }
 }
 

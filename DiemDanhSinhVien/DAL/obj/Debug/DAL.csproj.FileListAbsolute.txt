@@ -4,3 +4,9 @@ C:\Users\WTFBee\Documents\GitHub\DiemDanhSinhVien\DiemDanhSinhVien\DAL\bin\Debug
 C:\Users\WTFBee\Documents\GitHub\DiemDanhSinhVien\DiemDanhSinhVien\DAL\obj\Debug\DAL.dll
 C:\Users\WTFBee\Documents\GitHub\DiemDanhSinhVien\DiemDanhSinhVien\DAL\obj\Debug\DAL.pdb
 C:\Users\WTFBee\Documents\GitHub\DiemDanhSinhVien\DiemDanhSinhVien\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\A_Môn Chuyên Ngành\Window nc\LanCuoiGithub\diemdanhsv\DiemDanhSinhVien\DAL\bin\Debug\DAL.dll.config
+E:\A_Môn Chuyên Ngành\Window nc\LanCuoiGithub\diemdanhsv\DiemDanhSinhVien\DAL\bin\Debug\DAL.dll
+E:\A_Môn Chuyên Ngành\Window nc\LanCuoiGithub\diemdanhsv\DiemDanhSinhVien\DAL\bin\Debug\DAL.pdb
+E:\A_Môn Chuyên Ngành\Window nc\LanCuoiGithub\diemdanhsv\DiemDanhSinhVien\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\A_Môn Chuyên Ngành\Window nc\LanCuoiGithub\diemdanhsv\DiemDanhSinhVien\DAL\obj\Debug\DAL.dll
+E:\A_Môn Chuyên Ngành\Window nc\LanCuoiGithub\diemdanhsv\DiemDanhSinhVien\DAL\obj\Debug\DAL.pdb
